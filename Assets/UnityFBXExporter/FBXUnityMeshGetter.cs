@@ -483,20 +483,24 @@ namespace UnityFBXExporter
 					for(int i = 0; i < allMaterialsInThisMesh.Length; i++)
 					{
 						Material mat = allMaterialsInThisMesh[i];
-						int referenceId = Mathf.Abs(mat.GetInstanceID());
-		
-						if(mat == null)
-						{
-							Debug.LogError("ERROR: the game object " + gameObj.name + " has an empty material on it. This will export problematic files. Please fix and reexport");
-							continue;
-						}
 
-						tempConnectionsSb.AppendLine("\t;Material::" + mat.name + ", Model::" + mesh.name);
-						tempConnectionsSb.AppendLine("\tC: \"OO\"," + referenceId + "," + modelId);
-						tempConnectionsSb.AppendLine();
+						if(mat == null || mat.ToString() == "Default-Material (UnityEngine.Material)")
+                        {
+                            Material FixMaterial = FBXExporter.ReturnMaterial();
+                            meshRenderer.GetComponent<Renderer>().material = FixMaterial;
+                            continue;
+                        }
+                        else
+                        {
+                            int referenceId = Mathf.Abs(mat.GetInstanceID());
+
+                            tempConnectionsSb.AppendLine("\t;Material::" + mat.name + ", Model::" + mesh.name);
+                            tempConnectionsSb.AppendLine("\tC: \"OO\"," + referenceId + "," + modelId);
+                            tempConnectionsSb.AppendLine();
+                            continue;
+                        }
 					}
 				}
-
 			}
 
 			// Recursively add all the other objects to the string that has been built.

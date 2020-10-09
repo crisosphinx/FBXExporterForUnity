@@ -43,15 +43,15 @@ namespace UnityFBXExporter
         /// </summary>    
         public static bool ExportGameObjToFBX(GameObject gameObj, string newPath, bool copyMaterials = false, bool copyTextures = false)
 		{
-			// Check to see if the extension is right
-			if (Path.GetExtension(newPath).ToLower() != ".fbx")
+            // Check to see if the extension is right
+            if (Path.GetExtension(newPath).ToLower() != ".fbx")
 			{
 				Debug.LogError("The end of the path wasn't \".fbx\"");
 				return false;
 			}
 
 			if(copyMaterials)
-				CopyComplexMaterialsToPath(gameObj, newPath, copyTextures);
+				CopyComplexMaterialsToPath(gameObj, newPath, copyTextures, ReturnMaterial());
 
 			string buildMesh = MeshToString(gameObj, newPath, copyMaterials, copyTextures);
 
@@ -63,7 +63,7 @@ namespace UnityFBXExporter
 #if UNITY_EDITOR
             // Import the model properly so it looks for the material instead of by the texture name
             // TODO: By calling refresh, it imports the model with the wrong materials, but we can't find the model to import without
-            // refreshing the database. A chicken and the egg issue
+            // refreshing the database. A chicken or the egg issue
             AssetDatabase.Refresh();
 			string stringLocalPath = newPath.Remove(0, newPath.LastIndexOf("/Assets") + 1);
 			ModelImporter modelImporter = ModelImporter.GetAtPath(stringLocalPath) as ModelImporter;
@@ -119,7 +119,7 @@ namespace UnityFBXExporter
             string newLocation = currentLoc + "_.fbx";
 
             // Arguments for the converter
-            string args = string.Format($"-NoExit -Command \"{app}\" \"{currentLoc}\" \"{newLocation}\"").Replace(@"/", @"\"); // Makes all forward slash
+            string args = string.Format($"-NoExit -Command \"{app}\" \"{currentLoc}\" \"{newLocation}\"").Replace(@"/", @"\").Replace("\\\\","\\"); // Makes all forward slash
 
             // END RESULT SHOULD LOOK LIKE THIS:
             // powershell.exe -NoExit -Command "C:\VRWBDemo\'VR World Building Demo'\Assets\Scripts\Converter.ps1 C:\VRWBDemo\'VR World Building Demo'\Assets\Source\Cube.fbx C:\VRWBDemo\'VR World Building Demo'\Assets\Source\Cube.fbx_.fbx"
@@ -511,8 +511,36 @@ namespace UnityFBXExporter
 
 			return sb.ToString();
 		}
+        
+        public static Material ReturnMaterial()
+        {
+            // Create the material or get the material for assignment to renderer
+            if (File.Exists("Resources/Materials/ErrMissingMaterial_DONOTDELETE"))
+            {
+                Debug.Log("ERROR!");
+                Material material = new Material(Shader.Find("Transparent/Diffuse"));
+                material.SetFloat("_Mode", 2);
+                material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                material.SetInt("_ZWrite", 0);
+                material.DisableKeyword("_ALPHATEST_ON");
+                material.EnableKeyword("_ALPHABLEND_ON");
+                material.DisableKeyword("_ALPHAPREMULTIPLY_ON");
+                material.name = "ErrMissingMaterial_DONOTDELETE";
+                material.color = Color.red;
+                material.SetTexture("_MainTex", Resources.Load("Textures/exclamationPoint_DONOTDELETE") as Texture);
+                return material;
+            }
+            else
+            {
+                Debug.Log("FOUND IT!");
+                Material material = Resources.Load("Materials/ErrMissingMaterial_DONOTDELETE") as Material;
+                Debug.Log(material);
+                return material;
+            }
+        }
 
-		public static void CopyComplexMaterialsToPath(GameObject gameObj, string path, bool copyTextures, string texturesFolder = "/Textures", string materialsFolder = "/Materials")
+		public static void CopyComplexMaterialsToPath(GameObject gameObj, string path, bool copyTextures, Material material, string texturesFolder = "/Textures", string materialsFolder = "/Materials")
 		{
 #if UNITY_EDITOR
 			int folderIndex = path.LastIndexOf('/');
@@ -536,9 +564,19 @@ namespace UnityFBXExporter
 			{
 				for(int n = 0; n < meshRenderers[i].sharedMaterials.Length; n++)
 				{
-					everyMaterial.Add(meshRenderers[i].sharedMaterials[n]);
-				}
+                    Material temporaryMaterial = meshRenderers[i].sharedMaterials[n];
+                    if (temporaryMaterial == null || temporaryMaterial.ToString() == "Default-Material (UnityEngine.Material)")
+                    {
+                        meshRenderers[i].GetComponent<Renderer>().material = material;
+                    }
+                    else
+                    {
+                        everyMaterial.Add(temporaryMaterial);
+                    }
+
+                }
                 //Debug.Log(meshRenderers[i].gameObject.name);
+                //Debug.Log(meshRenderers[i].sharedMaterials[0]);
 			}
 
             Material[] everyDistinctMaterial = everyMaterial.Distinct().ToArray<Material>();
