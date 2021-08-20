@@ -97,7 +97,7 @@ namespace UnityFBXExporter
         /// <summary>
         /// This method Converts an ASCII FBX to a Binary FBX.
         /// </summary>    
-        public static string ConvertFBXviaCommandLine(string location)
+        public static void ConvertFBXviaCommandLine(string location)
         {
             System.Diagnostics.Process p = new System.Diagnostics.Process();
             // Redirect the output stream of the child process.
@@ -111,77 +111,44 @@ namespace UnityFBXExporter
 
             // Powershell + converter script ... Revise in future to allot for Shell and Bash.
             // Windows
-            if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Windows)
-            {
-                p.StartInfo.FileName = "powershell.exe";
-                string app = pathToConv + "\\Converter\\FBX\\FBXConverter.exe";
+            p.StartInfo.FileName = "powershell.exe";
+            string app = pathToConv + "\\Converter\\FBX\\FBXConverter.exe";
 
-                // Create a new location name for the converter
-                string currentLoc = string.Format("{0}\\{1}", pathToDir, location).Replace("Assets\\Assets", "Assets").Replace(@"/", @"\");
-                string newLocation = currentLoc + "_.fbx";
+            // Create a new location name for the converter
+            string currentLoc = string.Format("{0}\\{1}", pathToDir, location).Replace("Assets\\Assets", "Assets").Replace(@"/", @"\");
+            string newLocation = currentLoc + "_.fbx";
 
-                // Arguments for the converter
-                string args = string.Format($"-NoExit -Command \"{app}\" \"{currentLoc}\" \"{newLocation}\"").Replace(@"/", @"\").Replace("\\\\", "\\"); // Makes all forward slash
+            // Arguments for the converter
+            string args = string.Format($"-NoExit -Command \"{app}\" \"{currentLoc}\" \"{newLocation}\"").Replace(@"/", @"\").Replace("\\\\","\\"); // Makes all forward slash
 
-                // END RESULT SHOULD LOOK LIKE THIS:
-                // powershell.exe -NoExit -Command "C:\VRWBDemo\'VR World Building Demo'\Assets\Scripts\Converter.ps1 C:\VRWBDemo\'VR World Building Demo'\Assets\Source\Cube.fbx C:\VRWBDemo\'VR World Building Demo'\Assets\Source\Cube.fbx_.fbx"
-                //
-                RunConverter(process: p, newFile: holdNewFile, origFile: holdOrigFile, args: args);
-                return "Success!";
-            }
-            else if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.MacOSX)
-            {
-                p.StartInfo.FileName = pathToConv + "/Converter/FBX/FBXConverterUI.app/Contents/MacOS/bin/FbxConverter";
+            // END RESULT SHOULD LOOK LIKE THIS:
+            // powershell.exe -NoExit -Command "C:\VRWBDemo\'VR World Building Demo'\Assets\Scripts\Converter.ps1 C:\VRWBDemo\'VR World Building Demo'\Assets\Source\Cube.fbx C:\VRWBDemo\'VR World Building Demo'\Assets\Source\Cube.fbx_.fbx"
+            //
 
-                 // Create a new location name for the converter
-                string currentLoc = string.Format("{0}\\{1}", pathToDir, location).Replace("Assets\\Assets", "Assets").Replace(@"/", @"\");
-                string newLocation = currentLoc + "_.fbx";
-
-                // Arguments for the converter
-                string args = string.Format($"{currentLoc} {newLocation}");
-
-                // END RESULT SHOULD LOOK LIKE THIS:
-                // terminal: /VRWBDemo/VR\ World\ Building\ Demo/Assets/Source/Cube.fbx /VRWBDemo/VR\ World\ Building\ Demo/Assets/Source/Cube.fbx_.fbx"
-                //
-                RunConverter(process: p, newFile: holdNewFile, origFile: holdOrigFile, args: args);
-                return "Success!";
-            }
-            else if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.Linux)
-            {
-                return "Not yet implemented.";
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        public static void RunConverter(System.Diagnostics.Process process, string newFile, string origFile, string args)
-        {
             Debug.Log(args);
-            process.StartInfo.Arguments = args;
+            p.StartInfo.Arguments = args;
 
             // Start the process...
-            process.Start();
+            p.Start();
 
             // Do not wait for the child process to exit before
             // reading to the end of its redirected stream.
             // p.WaitForExit();
             // Read the output stream first and then wait.
-            string output = process.StandardOutput.ReadToEnd();
-            process.WaitForExit();
+            string output = p.StandardOutput.ReadToEnd();
+            p.WaitForExit();
 
             // Check the file
-            if (!File.Exists(newFile))
-                Debug.Log($"File is missing! {newFile}");
-            else if (CheckForBinary(newFile))
+            if (!File.Exists(holdNewFile))
+                Debug.Log($"File is missing! {holdNewFile}");
+            else if (CheckForBinary(holdNewFile))
                 Debug.Log("Model should now be converted properly to Binary FBX.");
-            else if (!CheckForBinary(newFile))
+            else if (!CheckForBinary(holdNewFile))
                 Debug.Log("Model is ASCII, you may have to fix this manually...");
-
-            File.Delete(origFile);
-            File.Delete(string.Format("{0}.meta", origFile));
-            File.Move(newFile, origFile);
+            
+            File.Delete(holdOrigFile);
+            File.Delete(string.Format("{0}.meta", holdOrigFile));
+            File.Move(holdNewFile, holdOrigFile);
 
             AssetDatabase.Refresh();
         }
