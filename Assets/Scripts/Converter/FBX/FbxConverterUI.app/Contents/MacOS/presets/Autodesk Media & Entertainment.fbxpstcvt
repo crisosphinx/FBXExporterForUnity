@@ -1,0 +1,1001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FbxCvtRoot>
+    <Preset>
+        <LastUsedPreset Path="" />
+        <Version s="1.0" />
+    </Preset>
+    <Import>
+        <FBX>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="FBX" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <NoOption>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="text" Value="" DefaultValue="" CommandOn="" />
+                <Localization>
+                    <Label>
+                        <ENU s="No option to set" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="No option to set" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </NoOption>
+        </FBX>
+        <_3ds>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="3DS" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <Textures>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/tex" />
+                <Localization>
+                    <Label>
+                        <ENU s="Textures" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include texture mapping with the file conversion" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Textures>
+            <Materials>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/mat" />
+                <Localization>
+                    <Label>
+                        <ENU s="Materials" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include materials with the file conversion.&#xa;If you disable this option, the texture option is ignored." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Materials>
+            <Animation>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/anim" />
+                <Localization>
+                    <Label>
+                        <ENU s="Animation" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include animation with the file conversion" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Animation>
+            <Mesh>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/mesh" />
+                <Localization>
+                    <Label>
+                        <ENU s="Mesh" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include geometry with the file conversion.&#xa;If you disable this option, mesh geometry is converted into Null or dummy objects, but the animation and hierarchy are preserved." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Mesh>
+            <Lights>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/light" />
+                <Localization>
+                    <Label>
+                        <ENU s="Lights" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include lights with the file conversion" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Lights>
+            <Cameras>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/cam" />
+                <Localization>
+                    <Label>
+                        <ENU s="Cameras" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include cameras with the file conversion" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Cameras>
+            <ConvertUnits>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/convertunit" />
+                <Localization>
+                    <Label>
+                        <ENU s="Convert Units" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to convert file units to centimeters.&#xa;If you disable this option, the source application scale&#xa;might not match once it is converted to or from the FBX file format." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </ConvertUnits>
+            <AmbientLights>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/ambientlight" />
+                <Localization>
+                    <Label>
+                        <ENU s="Ambient light" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to retain Ambient light settings with the file conversion" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </AmbientLights>
+            <SplitNormals>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/splitnormals" />
+                <Localization>
+                    <Label>
+                        <ENU s="Split Normals" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to split geometry Normals based on their edge continuity.&#xa;This option splits per-vertex Normals and should be used only in specific workflows where you want to ensure visual&#xa;fidelity of surface continuity in applications that do not support Smoothing Group conversion." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </SplitNormals>
+            <Filter>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/filter" />
+                <Localization>
+                    <Label>
+                        <ENU s="Apply Constant Key Reducer" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to apply the Constant Key Reducer filter to animation curves.&#xa;This reduces the number of redundant keyframes." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Filter>
+            <AddRoot>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/addroot" />
+                <Localization>
+                    <Label>
+                        <ENU s="Add Root Node" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to add a root node to all elements of your scene in the file conversion.&#xa;Doing this adds a null or dummy object at the top of the hierarchy." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </AddRoot>
+        </_3ds>
+        <dxf>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="DXF" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <AddRoot>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/r" />
+                <Localization>
+                    <Label>
+                        <ENU s="Add Root Node" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to add a root node to all elements of your scene in the file conversion.&#xa;Doing this adds a null or dummy object at the top of the hierarchy." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </AddRoot>
+            <WeldVertices>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/w" />
+                <Localization>
+                    <Label>
+                        <ENU s="Weld vertices" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to compare and merge vertices if they are found to be of equal value" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </WeldVertices>
+            <LayerBlockEntity>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="enum" Value="0" DefaultValue="0" CommandOn="Layer/Block/Entity" />
+                <Localization>
+                    <Label>
+                        <ENU s="Derive primitives" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Select -Layer- to derive one object from each layer,&#xa;select -Block- to group all entities into one single object.&#xa;(Only block imports are considered separate objects) or&#xa;select -Entity- to derive one object from each entity in the file." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </LayerBlockEntity>
+        </dxf>
+        <obj>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="OBJ" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <AddRoot>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/r" />
+                <Localization>
+                    <Label>
+                        <ENU s="Add Root Node" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to add a root node to all elements of your scene in the file conversion.&#xa;Doing this adds a null or dummy object at the top of the hierarchy." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </AddRoot>
+        </obj>
+        <dae>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="DAE (COLLADA)" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <NoOption>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="text" Value="" DefaultValue="" CommandOn="" />
+                <Localization>
+                    <Label>
+                        <ENU s="No option to set" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="No option to set" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </NoOption>
+        </dae>
+    </Import>
+    <Export>
+        <FBX201200>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="FBX 2012" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <EmbedMedia>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/e" />
+                <Localization>
+                    <Label>
+                        <ENU s="Embed media" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include (or embed) all media associated with your scene in the FBX file.&#xa;FBX 2012 can embed media even in ASCII format." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </EmbedMedia>
+            <ASCII>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="enum" Value="0" DefaultValue="0" CommandOn="Binary/ASCII" />
+                <Localization>
+                    <Label>
+                        <ENU s="FBX Save Mode" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Select -Binary- to save FBX file in binary or&#xa;select -ASCII- to save FBX file in ASCII" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </ASCII>
+        </FBX201200>
+        <FBX201100>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="FBX 2011" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <EmbedMedia>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/e" />
+                <Localization>
+                    <Label>
+                        <ENU s="Embed media" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include (or embed) all media associated with your scene in the FBX file.&#xa;FBX 2011 can embed media even in ASCII format." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </EmbedMedia>
+            <ASCII>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="enum" Value="0" DefaultValue="0" CommandOn="Binary/ASCII" />
+                <Localization>
+                    <Label>
+                        <ENU s="FBX Save Mode" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Select -Binary- to save FBX file in binary or&#xa;select -ASCII- to save FBX file in ASCII" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </ASCII>
+        </FBX201100>
+        <FBX201000>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="FBX 2010" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <EmbedMedia>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/e" />
+                <Localization>
+                    <Label>
+                        <ENU s="Embed media" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include (or embed) all media associated with your scene in the FBX file.&#xa;You cannot embed media if the file is saved in ASCII format." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </EmbedMedia>
+            <ASCII>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="enum" Value="0" DefaultValue="0" CommandOn="Binary/ASCII" />
+                <Localization>
+                    <Label>
+                        <ENU s="FBX Save Mode" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Select -Binary- to save FBX file in binary or&#xa;select -ASCII- to save FBX file in ASCII" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </ASCII>
+        </FBX201000>
+        <FBX200900>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="FBX 2009" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <EmbedMedia>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/e" />
+                <Localization>
+                    <Label>
+                        <ENU s="Embed media" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include (or embed) all media associated with your scene in the FBX file.&#xa;You cannot embed media if the file is saved in ASCII format." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </EmbedMedia>
+            <ASCII>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="enum" Value="0" DefaultValue="0" CommandOn="Binary/ASCII" />
+                <Localization>
+                    <Label>
+                        <ENU s="FBX Save Mode" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Select -Binary- to save FBX file in binary or&#xa;select -ASCII- to save FBX file in ASCII" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </ASCII>
+        </FBX200900>
+        <FBX200611>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="FBX 2006" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <EmbedMedia>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="0" DefaultValue="0" CommandOn="/e" />
+                <Localization>
+                    <Label>
+                        <ENU s="Embed media" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to include (or embed) all media associated with your scene in the FBX file.&#xa;You cannot embed media if the file is saved in ASCII format." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </EmbedMedia>
+            <ASCII>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="enum" Value="0" DefaultValue="0" CommandOn="Binary/ASCII" />
+                <Localization>
+                    <Label>
+                        <ENU s="FBX Save Mode" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Select -Binary- to save FBX file in binary or&#xa;select -ASCII- to save FBX file in ASCII" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </ASCII>
+        </FBX200611>
+        <dxf>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="DXF" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <Triangulate>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/t" />
+                <Localization>
+                    <Label>
+                        <ENU s="Triangulate" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to force the conversion of quads to triangles.&#xa;The FBX converter always triangulates NURBS and Patch geometries,&#xa;regardless of how you set this option.&#xa;The FBX Converter approximates NURBS and Patch geometry using&#xa;a polygon mesh made of triangles since the DXF format does not support NURBS or Patch geometry." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Triangulate>
+            <BakeDeformations>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/d" />
+                <Localization>
+                    <Label>
+                        <ENU s="Bake deformations" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to &quot;bake&quot; (or Plot) link and shape deformations on the resulting geometry" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </BakeDeformations>
+        </dxf>
+        <obj>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="OBJ" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <Triangulate>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/t" />
+                <Localization>
+                    <Label>
+                        <ENU s="Triangulate" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to force the conversion of quads to triangles.&#xa;The FBX converter always triangulates NURBS and Patch geometries,&#xa;regardless of how you set this option.&#xa;The FBX Converter approximates NURBS and Patch geometry using&#xa;a polygon mesh made of triangles since the DXF format does not support NURBS or Patch geometry." />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </Triangulate>
+            <BakeDeformations>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="bool" Value="1" DefaultValue="1" CommandOn="/d" />
+                <Localization>
+                    <Label>
+                        <ENU s="Bake deformations" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="Activate this option to &quot;bake&quot; (or Plot) link and shape deformations on the resulting geometry" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </BakeDeformations>
+        </obj>
+        <dae>
+            <UI Expanded="1" Disabled="0" Group="1" Visible="1" Panel="0" />
+            <Data DataType="String" Value="" DefaultValue="" CommandOn="" />
+            <Localization>
+                <Label>
+                    <ENU s="DAE (COLLADA)" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Label>
+                <Tooltip>
+                    <ENU s="" />
+                    <DEU s="" />
+                    <FRA s="" />
+                    <JPN s="" />
+                    <KOR s="" />
+                    <CHS s="" />
+                </Tooltip>
+            </Localization>
+            <NoOption>
+                <UI Expanded="0" Disabled="0" Group="0" Visible="1" Panel="0" />
+                <Data DataType="text" Value="" DefaultValue="" CommandOn="" />
+                <Localization>
+                    <Label>
+                        <ENU s="No option to set" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Label>
+                    <Tooltip>
+                        <ENU s="No option to set" />
+                        <DEU s="" />
+                        <FRA s="" />
+                        <JPN s="" />
+                        <KOR s="" />
+                        <CHS s="" />
+                    </Tooltip>
+                </Localization>
+            </NoOption>
+        </dae>
+    </Export>
+</FbxCvtRoot>
