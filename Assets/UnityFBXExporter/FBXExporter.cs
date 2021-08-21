@@ -127,9 +127,9 @@ namespace UnityFBXExporter
             }
             else if (SystemInfo.operatingSystemFamily == OperatingSystemFamily.MacOSX)
             {
-                p.StartInfo.FileName = string.Format($"\"{pathToMacConverter}\" \"{originalFile}\" \"{newFile}\"");
+                p.StartInfo.FileName = pathToMacConverter;
 
-                args = null;
+                args = string.Format($"\"{originalFile}\" \"{newFile}\"");
                 // END RESULT SHOULD LOOK LIKE THIS:
                 // terminal: /VRWBDemo/VR\ World\ Building\ Demo/Assets/Source/Cube.fbx /VRWBDemo/VR\ World\ Building\ Demo/Assets/Source/Cube.fbx_.fbx"
             }
